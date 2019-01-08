@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Activity 3</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<center>
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6">
+		<h1><b>Pera Padala</h1>
+	</div>
+	<div class="col-sm-3"></div>
+</div> <br><br>
+<div class="row">
+	<div class="col-sm-12">
+		<h3>Money:</h3>
+		<input type="text" id="num2">
+		<input type="button" class="btn btn-success" value="CHECK" onclick="result()">
+	</div>
+</div> <br><br>
+<div class="row">
+	<div class="col-sm-6">
+		<h1>Interest Rate:</h1><h1 id="rate"></h1>
+	</div>
+	<div class="col-sm-6">
+		<h1>Please Pay:</h1><h1 id="pay"></h1>		
+	</div>
+</div>
+</div>
+	<script type="text/javascript">
+		
+		
+		function result()
+	{
+		var agevalue=Number(document.getElementById('num2').value);
+		var category=Number("");
+		if(isNaN(agevalue)==false)
+		{
+			if (agevalue>10000)
+			{
+				alert("Too much money")
+			}
+			else if (agevalue>5000)
+			{
+				category=50
+			}
+			else if (agevalue>2000)
+			{
+				category=20
+			}
+			else if (agevalue>1000)
+			{
+				category=10
+			}
+			else if (agevalue>500)
+			{
+				category=4
+			}
+			else if (agevalue>200)
+			{
+				category=3
+			}
+			else if (agevalue>99)
+			{
+				category=2
+			}
+			else
+			{
+				category=0
+			}
+				document.getElementById('rate').innerHTML=category;
+				var num2=Number(agevalue);
+				var payment=category+num2;
+				document.getElementById('pay').innerHTML=payment;
+			}
+			else
+			{
+				alert("Something went wrong")
+			}
+	}
+	</script>
+</body>
+</html>
